@@ -37,7 +37,6 @@ section, .card {
     border: 1px solid #333 !important; /* Borde sutil para separar del fondo */
 }
 
-/* Este es el cambio que pediste para el costado del recuadro */
 h2 {
     color: var(--primary) !important;
     border-left: 5px solid var(--primary) !important; /* La barra lateral azul */
@@ -45,7 +44,6 @@ h2 {
     margin-top: 0;
 }
 
-/* Esto asegura que las cajas de habilidades usen el flexbox que definiste */
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
@@ -55,7 +53,7 @@ h2 {
 /* Estilo para habilidades blandas (con borde en vez de fondo sólido) */
 /* Estilo de los recuadros de colores (Técnicas) */
 .skills-grid span {
-    background-color: var(--primary) !important; /* El azul brillante que definiste */
+    background-color: var(--primary) !important; /* El azul brillante */
     color: #000000 !important; /* Texto negro para que resalte sobre el azul */
     padding: 10px 20px;
     border-radius: 6px;
@@ -72,7 +70,6 @@ h2 {
     border: 2px solid var(--primary) !important;
 }
 
-/* Mejora para los títulos secundarios */
 /* Color para los subtítulos (Programación, Soporte, etc) */
 .text-secondary {
     color: #a0a0a0 !important;
@@ -86,7 +83,7 @@ h2 {
 }
 
 .experience-list li {
-    background-color: rgba(255, 255, 255, 0.05); /* Un fondo muy sutil para cada ítem */
+    background-color: rgba(255, 255, 255, 0.05); /* Un fondo para cada ítem */
     margin-bottom: 10px;
     padding: 12px 15px;
     border-radius: 6px;
@@ -104,7 +101,7 @@ h3.fw-bold {
 }
 
 .educacion-item {
-    background: rgba(255, 255, 255, 0.03) !important; /* El fondo sutil que tenías */
+    background: rgba(255, 255, 255, 0.03) !important; /* El fondo  */
     border-left: 4px solid var(--primary); /* Un detalle visual para resaltar */
 }
 
@@ -149,7 +146,7 @@ footer a {
 html {
     scroll-behavior: smooth;
 }
- 
+
 .btn-descarga {
     display: inline-block;
     padding: 12px 25px;
@@ -166,7 +163,48 @@ html {
 
 .btn-descarga:hover {
     background-color: var(--primary);
-    color: #121212 !important; /* El texto se vuelve oscuro al pasar el mouse */
+    color: #121212 !important; /* El texto se pone oscuro al pasar el mouse */
     box-shadow: 0 0 20px rgba(0, 168, 255, 0.4); /* Efecto de brillo azul */
-    transform: scale(1.05); /* Se agranda apenas un poquito */
+    transform: scale(1.05); /* Se agranda  un poquito */
+}
+
+.icon-skill {
+    width: 24px;         /* Tamaño del icono */
+    height: 24px;        /* Mantiene la proporción */
+    object-fit: contain; /* Asegura que la imagen no se deforme */
+    margin-right: 8px;   /* Espacio entre el icono y el texto */
+    vertical-align: middle; /* Alinea el icono al centro del texto */
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5)); /* Les da un poquito de profundidad */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover: el icono resalta cuando pasa el mouse por el span */
+.skills-grid span:hover .icon-skill {
+    transform: scale(1.4) rotate(-5deg);
+}
+
+/*  Efecto pasar el mouse por el botón de LinkedIn */
+.btn-primary:hover {
+    background-color: #ffffff !important; /* El fondo  blanco */
+    color: var(--primary) !important;      /* El texto  azul */
+    border-color: #ffffff !important;
+}
+
+/* Estilo base para el enlace de Instagram en el título */
+.btn-instagram {
+    color: white; /* Color inicial blanco */
+    text-decoration: none;
+    padding: 5px 15px;
+    border: 2px solid transparent; /*  espacio para el borde */
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Efecto Hover  */
+.btn-instagram:hover {
+    background-color: #ffffff !important; /* Fondo blanco */
+    color: var(--primary) !important;      /* Texto azul brillante */
+    border-color: #ffffff !important;    /* Borde blanco */
+    transform: translateY(-2px);         /* Pequeño salto hacia arriba */
 }
