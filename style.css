@@ -1,0 +1,210 @@
+:root {
+    --primary: #00a8ff;       /* El azul brillante para los bordes y títulos */
+    --bg-dark: #121212;      /* Fondo principal oscuro */
+    --card-bg: #1e1e1e;      /* Fondo de las secciones */
+    --text-color: #e0e0e0;   /* Texto claro */
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-dark) !important;
+    color: var(--text-color) !important;
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(to right, #1a2a6c, #000000) !important;
+    color: white !important;
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 2px solid var(--primary);
+}
+
+.container {
+    max-width: 850px;
+    margin: 20px auto;
+    padding: 20px;
+    
+}
+
+section, .card {
+    background-color: var(--card-bg) !important;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5) !important;
+    border: 1px solid #333 !important; /* Borde sutil para separar del fondo */
+}
+
+h2 {
+    color: var(--primary) !important;
+    border-left: 5px solid var(--primary) !important; /* La barra lateral azul */
+    padding-left: 15px;
+    margin-top: 0;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Estilo para habilidades blandas (con borde en vez de fondo sólido) */
+/* Estilo de los recuadros de colores (Técnicas) */
+.skills-grid span {
+    background-color: var(--primary) !important; /* El azul brillante */
+    color: #000000 !important; /* Texto negro para que resalte sobre el azul */
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    display: inline-block;
+    transition: transform 0.2s; /* Efecto visual al pasar el mouse */
+}
+
+/* Estilo específico para las Habilidades Blandas (Solo borde, sin fondo sólido) */
+.skills-grid span.soft-skill {
+    background-color: transparent !important;
+    color: var(--primary) !important;
+    border: 2px solid var(--primary) !important;
+}
+
+/* Color para los subtítulos (Programación, Soporte, etc) */
+.text-secondary {
+    color: #a0a0a0 !important;
+    font-weight: 300;
+}
+
+/* Estilo para la lista de experiencia */
+.experience-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience-list li {
+    background-color: rgba(255, 255, 255, 0.05); /* Un fondo para cada ítem */
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: 6px;
+    border-left: 3px solid var(--primary); /* Una línea azul a la izquierda */
+    color: var(--text-color);
+}
+
+.experience-list li span {
+    margin-right: 10px;
+}
+
+/* Para que los títulos de las empresas resalten */
+h3.fw-bold {
+    letter-spacing: 0.5px;
+}
+
+.educacion-item {
+    background: rgba(255, 255, 255, 0.03) !important; /* El fondo  */
+    border-left: 4px solid var(--primary); /* Un detalle visual para resaltar */
+}
+
+.educacion-item h3 {
+    color: #ffffff !important; /* Forzamos el blanco para el título */
+}
+
+.educacion-item p {
+    color: #b0b0b0 !important; /* El gris secundario */
+    margin-bottom: 0;
+}
+
+/* El texto "En curso" */
+.estado-cursada {
+    color: var(--primary) !important;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Estilo para los títulos de las Cards de certificación */
+.card-title {
+    color: var(--primary) !important;
+}
+
+.card-text {
+    color: #b0b0b0 !important;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #000000 !important;
+    color: white;
+}
+
+footer a {
+    color: var(--primary) !important;
+    text-decoration: none;
+}
+
+/* Suavizar el scroll al usar la Navbar */
+html {
+    scroll-behavior: smooth;
+}
+
+.btn-descarga {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: transparent;
+    color: var(--primary) !important;
+    border: 2px solid var(--primary);
+    border-radius: 30px; /* Bordes redondeados modernos */
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-descarga:hover {
+    background-color: var(--primary);
+    color: #121212 !important; /* El texto se pone oscuro al pasar el mouse */
+    box-shadow: 0 0 20px rgba(0, 168, 255, 0.4); /* Efecto de brillo azul */
+    transform: scale(1.05); /* Se agranda  un poquito */
+}
+
+.icon-skill {
+    width: 24px;         /* Tamaño del icono */
+    height: 24px;        /* Mantiene la proporción */
+    object-fit: contain; /* Asegura que la imagen no se deforme */
+    margin-right: 8px;   /* Espacio entre el icono y el texto */
+    vertical-align: middle; /* Alinea el icono al centro del texto */
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5)); /* Les da un poquito de profundidad */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover: el icono resalta cuando pasa el mouse por el span */
+.skills-grid span:hover .icon-skill {
+    transform: scale(1.4) rotate(-5deg);
+}
+
+/*  Efecto pasar el mouse por el botón de LinkedIn */
+.btn-primary:hover {
+    background-color: #ffffff !important; /* El fondo  blanco */
+    color: var(--primary) !important;      /* El texto  azul */
+    border-color: #ffffff !important;
+}
+
+/* Estilo base para el enlace de Instagram en el título */
+.btn-instagram {
+    color: white; /* Color inicial blanco */
+    text-decoration: none;
+    padding: 5px 15px;
+    border: 2px solid transparent; /*  espacio para el borde */
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Efecto Hover  */
+.btn-instagram:hover {
+    background-color: #ffffff !important; /* Fondo blanco */
+    color: var(--primary) !important;      /* Texto azul brillante */
+    border-color: #ffffff !important;    /* Borde blanco */
+    transform: translateY(-2px);         /* Pequeño salto hacia arriba */
+}
