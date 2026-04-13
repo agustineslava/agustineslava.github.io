@@ -110,7 +110,7 @@ const cambiarIdioma = (idioma) => {
     });
     
     let contenidoBoton = '';
-    // REGLA: El botón debe mostrar el idioma al que vas a CAMBIAR
+    
     if (idioma === 'es') {
         contenidoBoton = `
             <img src="banderas/bandera_ingles.png" alt="Bandera EN" class="img-bandera" style="width: 25px; height: auto;">
