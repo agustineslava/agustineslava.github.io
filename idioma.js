@@ -1,0 +1,123 @@
+const textos = {
+    "es": {
+        "nav": {
+            "inicio": "Inicio",
+            "experiencia": "Experiencia",
+            "educacion": "Educación",
+            "habilidades": "Habilidades"
+        },
+        "header": {
+            "subtitulo": "Analista en Sistemas (en curso) | Técnico En Reparación de Electrodomésticos",
+            "boton-cv": "Descargar CV (PDF) 📥"
+        },
+        "resumen": {
+            "titulo": "Resumen",
+            "texto": "Soy Agustín Eslava, técnico con más de nueve años de experiencia en la reparación de electrodomésticos, venta de repuestos y atención al cliente. Me especializo en el diagnóstico, reparación y servicio técnico de marcas líderes, además de tener habilidades en la gestión de redes sociales comerciales, herramientas de Office y programación. Actualmente, curso la Tecnicatura en Análisis de Sistemas y me formo en desarrollo web Front-End, con el objetivo de integrar mis conocimientos técnicos con el ámbito digital."
+        },
+        "exp": {
+            "titulo-pag": "Experiencia Laboral",
+            "puesto": "Técnico en Reparación de Electrodomésticos",
+            "fecha": "2016 - Presente",
+            "item1": "<span>🛠️</span> Diagnóstico y reparación de electrodomésticos.",
+            "item2": "<span>🏅</span> Servicio técnico oficial: Drean, Whirlpool, Ariston, entre otras.",
+            "item3": "<span>🤝</span> Venta de repuestos, asesoramiento técnico y atención al cliente.",
+            "item4": "<span>📱</span> Gestión de redes sociales comerciales de la empresa."
+        },
+        "edu": {
+            "titulo-acad": "Formación Académica",
+            "carrera": "Analista de Sistemas",
+            "estado": "En curso",
+            "titulo-cursos": "Cursos y Certificaciones",
+            "cert1-info": "Udemy | Finalizado Septiembre 2025",
+            "cert2-info": "Udemy | Finalizado Septiembre 2024",
+            "btn-cert": "Ver Certificado"
+        },
+        "skills":{
+            "titulo-pag": "Habilidades Técnicas",
+            "cat1": "Programación y Desarrollo",
+            "cat2": "Soporte Técnico y Gestión",
+            "cat3": "Habilidades Blandas",
+            "soporte1": "Reparación de Electrodomésticos",
+            "soporte2": "Diagnóstico de Fallas",
+            "soporte3": "Gestión de Redes Comerciales",
+            "soft1": "Comunicación",
+            "soft2": "Trabajo en Equipo",
+            "soft3": "Manejo de Presión"
+        }
+    },
+    "en": {
+        "nav": {
+            "inicio": "Home",
+            "experiencia": "Experience",
+            "educacion": "Education",
+            "habilidades": "Skills"
+        },
+        "header": {
+            "subtitulo": "Systems Analyst (in progress) | Appliance Repair Technician",
+            "boton-cv": "Download CV (PDF) 📥"
+        },
+        "resumen": {
+            "titulo": "Summary",
+            "texto": "I am Agustín Eslava, a technician with over nine years of experience in appliance repair, spare parts sales, and customer service. I specialize in the diagnosis, repair, and technical service of leading brands, in addition to having skills in commercial social media management, Office tools, and programming. Currently, I am studying Systems Analysis and training in Front-End web development, with the goal of integrating my technical knowledge with the digital field."
+        },
+        "exp": {
+            "titulo-pag": "Work Experience",
+            "puesto": "Appliance Repair Technician",
+            "fecha": "2016 - Present",
+            "item1": "<span>🛠️</span> Diagnosis and repair of household appliances.",
+            "item2": "<span>🏅</span> Official technical service: Drean, Whirlpool, Ariston, among others.",
+            "item3": "<span>🤝</span> Spare parts sales, technical advice, and customer service.",
+            "item4": "<span>📱</span> Management of the company's commercial social networks."
+        },
+        "edu": {
+            "titulo-acad": "Academic Background",
+            "carrera": "Systems Analyst",
+            "estado": "In progress",
+            "titulo-cursos": "Courses and Certifications",
+            "cert1-info": "Udemy | Finished September 2025",
+            "cert2-info": "Udemy | Finished September 2024",
+            "btn-cert": "View Certificate"
+        },
+        "skills":{
+            "titulo-pag": "Technical Skills",
+            "cat1": "Programming & Development",
+            "cat2": "Technical Support & Management",
+            "cat3": "Soft Skills",
+            "soporte1": "Appliance Repair",
+            "soporte2": "Fault Diagnosis",
+            "soporte3": "Commercial Social Media Management",
+            "soft1": "Communication",
+            "soft2": "Teamwork",
+            "soft3": "Pressure Management"
+        }
+    }
+};
+
+const botonIdioma = document.getElementById('btn-idioma');
+const elementosATraducir = document.querySelectorAll('[data-section]');
+
+const cambiarIdioma = (idioma) => {
+    elementosATraducir.forEach((elemento) => {
+        const seccion = elemento.dataset.section;
+        const valor = elemento.dataset.value;
+
+        // Verificamos que la traducción exista para no tirar error
+        if (textos[idioma] && textos[idioma][seccion] && textos[idioma][seccion][valor]) {
+            elemento.innerHTML = textos[idioma][seccion][valor];
+        }
+    });
+    
+    localStorage.setItem('idioma', idioma);
+    // Cambiamos el texto del botón según el idioma que NO está activo
+    botonIdioma.innerHTML = idioma === 'es' ? '🇺🇸 English' : '🇦🇷 Español';
+};
+
+botonIdioma.addEventListener('click', () => {
+    const idiomaActual = localStorage.getItem('idioma') === 'en' ? 'es' : 'en';
+    cambiarIdioma(idiomaActual);
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    const idiomaGuardado = localStorage.getItem('idioma') || 'es';
+    cambiarIdioma(idiomaGuardado);
+});
