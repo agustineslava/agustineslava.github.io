@@ -97,27 +97,47 @@ const botonIdioma = document.getElementById('btn-idioma');
 const elementosATraducir = document.querySelectorAll('[data-section]');
 
 const cambiarIdioma = (idioma) => {
+    // 1. Guardamos el idioma en localStorage para que sea persistente
+    localStorage.setItem('idioma', idioma);
+
     elementosATraducir.forEach((elemento) => {
         const seccion = elemento.dataset.section;
         const valor = elemento.dataset.value;
 
-        // Verificamos que la traducción exista para no tirar error
         if (textos[idioma] && textos[idioma][seccion] && textos[idioma][seccion][valor]) {
             elemento.innerHTML = textos[idioma][seccion][valor];
         }
     });
     
-    localStorage.setItem('idioma', idioma);
-    // Cambiamos el texto del botón según el idioma que NO está activo
-    botonIdioma.innerHTML = idioma === 'es' ? '🇺🇸 English' : '🇦🇷 Español';
+    let contenidoBoton = '';
+    // REGLA: El botón debe mostrar el idioma al que vas a CAMBIAR
+    if (idioma === 'es') {
+        contenidoBoton = `
+            <img src="banderas/bandera_ingles.png" alt="Bandera EN" class="img-bandera" style="width: 25px; height: auto;">
+            <span>English</span>
+        `;
+    } else {
+        contenidoBoton = `
+            <img src="banderas/bandera_hispana.png" alt="Bandera ES" class="img-bandera" style="width: 25px; height: auto;">
+            <span>Español</span>
+        `;
+    }
+
+    if (botonIdioma) {
+        botonIdioma.innerHTML = contenidoBoton;
+    }
 };
 
 botonIdioma.addEventListener('click', () => {
-    const idiomaActual = localStorage.getItem('idioma') === 'en' ? 'es' : 'en';
-    cambiarIdioma(idiomaActual);
+    // Leemos el idioma actual del localStorage
+    const idiomaActual = localStorage.getItem('idioma') || 'es';
+    // Si es 'es', el nuevo será 'en', y viceversa
+    const nuevoIdioma = idiomaActual === 'es' ? 'en' : 'es';
+    cambiarIdioma(nuevoIdioma);
 });
 
 window.addEventListener('DOMContentLoaded', () => {
+    // Al cargar, buscamos qué idioma quedó guardado
     const idiomaGuardado = localStorage.getItem('idioma') || 'es';
     cambiarIdioma(idiomaGuardado);
 });
