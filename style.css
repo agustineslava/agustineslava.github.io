@@ -206,3 +206,22 @@ html {
     border-color: #ffffff !important;
     transform: scale(1.05);
 }
+
+/* Estilo base para el enlace de Instagram en el título */
+.btn-instagram {
+    color: white; /* Color inicial blanco */
+    text-decoration: none;
+    padding: 5px 15px;
+    border: 2px solid transparent; /*  espacio para el borde */
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Efecto Hover  */
+.btn-instagram:hover {
+    background-color: #ffffff !important; /* Fondo blanco */
+    color: var(--primary) !important;      /* Texto azul brillante */
+    border-color: #ffffff !important;    /* Borde blanco */
+    transform: translateY(-2px);         /* Pequeño salto hacia arriba */
+}
