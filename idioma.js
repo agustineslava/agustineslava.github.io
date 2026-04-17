@@ -4,7 +4,8 @@ const textos = {
             "inicio": "Inicio",
             "experiencia": "Experiencia",
             "educacion": "Educación",
-            "habilidades": "Habilidades"
+            "habilidades": "Habilidades",
+            "portafolio": "Portafolio"
         },
         "header": {
             "subtitulo": "Analista en Sistemas (en curso) | Técnico En Reparación de Electrodomésticos",

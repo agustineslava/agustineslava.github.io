@@ -225,3 +225,29 @@ html {
     border-color: #ffffff !important;    /* Borde blanco */
     transform: translateY(-2px);         /* Pequeño salto hacia arriba */
 }
+
+/* Tarjeta de proyectos*/
+.card-proyecto{
+    background-color: var(--card-bg);
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card-proyecto:hover{
+    transform: translateY(-10px);
+    border-color:var(--primary);
+    box-shadow: 0 10px 20px rgba(0, 168, 255, 0.2);
+}
+
+.card-proyecto .card-img-top{
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-proyecto .card-title{
+    color:var(--primary);
+    font-weight: bold;
+}
+
+.bad
