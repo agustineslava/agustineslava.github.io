@@ -4,7 +4,8 @@ const textos = {
             "inicio": "Inicio",
             "experiencia": "Experiencia",
             "educacion": "Educación",
-            "habilidades": "Habilidades"
+            "habilidades": "Habilidades",
+            "proyectos": "Proyectos"
         },
         "header": {
             "subtitulo": "Analista en Sistemas (en curso) | Técnico En Reparación de Electrodomésticos",
@@ -43,6 +44,11 @@ const textos = {
             "soft1": "Comunicación",
             "soft2": "Trabajo en Equipo",
             "soft3": "Manejo de Presión"
+        },
+        "projects":{
+            "titulo-pag":"Mis Proyectos",
+            "p1-titulo":"Sistema de Gestion",
+            "p1-desc":"Control de stock para Service Integral"
         }
     },
     "en": {
@@ -50,7 +56,8 @@ const textos = {
             "inicio": "Home",
             "experiencia": "Experience",
             "educacion": "Education",
-            "habilidades": "Skills"
+            "habilidades": "Skills",
+            "proyectos": "Projects"
         },
         "header": {
             "subtitulo": "Systems Analyst (in progress) | Appliance Repair Technician",
@@ -89,6 +96,11 @@ const textos = {
             "soft1": "Communication",
             "soft2": "Teamwork",
             "soft3": "Pressure Management"
+        },
+        "projects":{
+            "titulo-pag":"My Projects",
+            "p1-titulo": "Management System",
+            "p1-desc": "Stock and customer control for Service Integral"
         }
     }
 };
@@ -110,7 +122,7 @@ const cambiarIdioma = (idioma) => {
     });
     
     let contenidoBoton = '';
-    // REGLA: El botón debe mostrar el idioma al que vas a CAMBIAR
+    
     if (idioma === 'es') {
         contenidoBoton = `
             <img src="banderas/bandera_ingles.png" alt="Bandera EN" class="img-bandera" style="width: 25px; height: auto;">

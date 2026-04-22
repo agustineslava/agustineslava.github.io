@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiencia | Agustín Eslava</title>
+    <title>Educación | Agustín Eslava</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,17 +11,17 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow py-4">
         <div class="container-fluid px-5">
-            <a class="navbar-brand fw-bold" href="index.html">Agustín Eslava | Portafolio</a>
+            <a class="navbar-brand fw-bold" href="index.html">Agustín Eslava | Proyectos</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="index.html" data-section="nav" data-value="inicio">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="experiencia.html" data-section="nav" data-value="experiencia">Experiencia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experiencia.html" data-section="nav" data-value="experiencia">Experiencia</a></li>
                     <li class="nav-item"><a class="nav-link" href="educacion.html" data-section="nav" data-value="educacion">Educación</a></li>
                     <li class="nav-item"><a class="nav-link" href="habilidades.html" data-section="nav" data-value="habilidades">Habilidades</a></li>
-                    <li class="nav-item"><a class="nav-link" href="proyectos.html" data-section="nav" data-value="proyectos">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="proyectos.html" data-section="nav" data-value="proyectos">Proyectos</a></li>
                     <li class="nav-item ms-lg-3">
                         <button id="btn-idioma" class="btn btn-outline-info btn-sm border-0 d-flex align-items-center gap-2"></button>
                     </li>
@@ -30,35 +30,35 @@
         </div>
     </nav>
 
+
     <header>
         <h1 class="display-4 fw-bold">Agustín Eslava</h1>
         <p class="lead" data-section="header" data-value="subtitulo">Analista en Sistemas (en curso) | Técnico En Reparación de Electrodomésticos</p>
     </header>
 
 
-    <div class="container my-5">
-        <section class="p-5"> 
-            <h2 class="display-6 mb-4" data-section="exp" data-value="titulo-pag">Experiencia Laboral</h2>
-            
-            <div class="mb-4">
-                <h3 class="h4 fw-bold">
-                    <a href="https://www.instagram.com/service_integral2021/" target="_blank" rel="noopener" class="btn-instagram">
-                        Service Integral (Chacabuco)
-                    </a>
-                </h3>
-                <p class="text-secondary">
-                    <strong class="text-primary" data-section="exp" data-value="puesto">Técnico en Reparación de Electrodomésticos</strong> | <span data-section="exp" data-value="fecha">2016 - Presente</span>
-                </p>
-                
-                <ul class="experience-list mt-3">
-                    <li data-section="exp" data-value="item1"><span>🛠️</span> Diagnóstico y reparación de electrodomésticos.</li>
-                    <li data-section="exp" data-value="item2"><span>🏅</span> Servicio técnico oficial: Drean, Whirlpool, Ariston, entre otras.</li>
-                    <li data-section="exp" data-value="item3"><span>🤝</span> Venta de repuestos, asesoramiento técnico y atención al cliente.</li>
-                    <li data-section="exp" data-value="item4"><span>📱</span> Gestión de redes sociales comerciales de la empresa.</li>
-                </ul>
+  <div class="container my-5">
+        <section class="p-5 shadow-sm rounded-3">
+            <h2 class="display-6 mb-4" data-section="projects" data-value="titulo-pag">Mis Proyectos</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 card-proyecto">
+                        <img src="proyectos/gestion.png" class="card-img-top" alt="Proyecto Gestion">
+                        <div class="card-body">
+                            <h5 class="card-title" data-section="projects" data-value="p1-titulo">Sistema de Gestion</h5>
+                            <p class="card-text" data-section="projects" data-value="p1-desc">Control de stock para Service Integral</p>
+                            <div class="tags-proyectos">
+                                <span class="badge-tech">JavaScript</span>
+                                <span class="badge-tech">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6"></div>
             </div>
         </section>
     </div>
+
 
     <footer class="bg-dark text-white text-center py-4 mt-5">
         <p class="mb-1">📍 Chacabuco, Buenos Aires | 📧 <a href="mailto:aguseslava11@gmail.com" class="text-info"> aguseslava11@gmail.com</a> </p>
@@ -71,5 +71,3 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="idioma.js"></script>
-</body>
-</html>
