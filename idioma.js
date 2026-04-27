@@ -46,11 +46,15 @@ const textos = {
             "soft2": "Trabajo en Equipo",
             "soft3": "Manejo de Presión"
         },
-        "projects":{
-            "titulo-pag":"Mis Proyectos",
-            "p1-titulo":"Sistema de Gestion",
-            "p1-desc":"Control de stock para Service Integral"
-        }
+       "projects": {
+            "titulo-pag": "Mis Proyectos",
+            "p1-titulo": "Sistema de Gestión",
+            "p1-desc": "Control de stock para Service Integral",
+            "p2-titulo": "Portafolio Virtual",
+            "ver-galeria": "Ver Galería 📸",
+            "p2-desc": "Sitio web profesional bilingüe.",
+            "btn-repo": "Ver Código en GitHub 💻"
+}
     },
     "en": {
         "nav": {
@@ -102,7 +106,11 @@ const textos = {
         "projects":{
             "titulo-pag":"My Projects",
             "p1-titulo": "Management System",
-            "p1-desc": "Stock and customer control for Service Integral"
+            "p1-desc": "Stock and customer control for Service Integral",
+            "p2-titulo": "Virtual Portfolio",
+            "ver-galeria": "View Gallery 📸",
+            "p2-desc": "Bilingual professional website.",
+            "btn-repo": "View Code on GitHub 💻"
         }
     }
 };
