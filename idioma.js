@@ -53,7 +53,8 @@ const textos = {
             "p2-titulo": "Portafolio Virtual",
             "ver-galeria": "Ver Galería 📸",
             "p2-desc": "Sitio web profesional bilingüe.",
-            "btn-repo": "Ver Código en GitHub 💻"
+            "btn-repo": "Ver Código en GitHub 💻",
+            "modal-titulo": "Galería de Proyecto"
 }
     },
     "en": {
@@ -110,7 +111,8 @@ const textos = {
             "p2-titulo": "Virtual Portfolio",
             "ver-galeria": "View Gallery 📸",
             "p2-desc": "Bilingual professional website.",
-            "btn-repo": "View Code on GitHub 💻"
+            "btn-repo": "View Code on GitHub 💻",
+            "modal-titulo": "Project Gallery"
         }
     }
 };
